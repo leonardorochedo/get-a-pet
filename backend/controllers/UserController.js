@@ -136,6 +136,7 @@ module.exports = class UserController {
 
         const id = req.params.id
 
+        // get a user by id -password
         const user = await User.findById(id).select('-password')
 
         // check if user not exist
@@ -145,5 +146,12 @@ module.exports = class UserController {
         }
 
         res.status(200).json({ user })
+    }
+
+    static async editUser(req, res) {
+        res.status(200).json({
+            message: 'Deu certo update!'
+        })
+        return
     }
 }
