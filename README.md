@@ -6,14 +6,14 @@
 <p>EM BREVE!</p>
 
 <ul align="center">
-    <h1>Tecnologias Utilizadas:</h1>
+    <h5>Tecnologias Utilizadas:</h5>
     <li>React</li>
     <li>Node.js</li>
     <li>MongoDB</li>
 </ul>
 
 <ul align="center">
-    <h2>Dependencias do FrontEnd:</h2>
+    <h5>Dependencias do FrontEnd:</h5>
     <li>axios</li>
     <li>events</li>
     <li>react-router-dom</li>
@@ -21,7 +21,7 @@
 </ul>
 
 <ul align="center">
-    <h2>Dependencias do BackEnd:</h2>
+    <h5>Dependencias do BackEnd:</h5>
     <li>bcrypt</li>
     <li>cookie-parser</li>
     <li>cors</li>
