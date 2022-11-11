@@ -1,6 +1,7 @@
 /* VARIABLES */
 :root {
-  --primary-color: #16479d;
+  --primary-text-color: #16479d;
+  --primary-bg-color: #FFD400;
 }
 
 * {
@@ -11,12 +12,12 @@
 }
 
 h1 {
-  color: var(--primary-color);
+  color: var(--primary-text-color);
   margin-bottom: 1em;
   font-size: 2.1em;
 }
 
 .bold {
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--primary-text-color);
 }
