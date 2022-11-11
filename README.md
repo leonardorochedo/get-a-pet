@@ -6,7 +6,7 @@
 <p>EM BREVE!</p>
 
 <ul align="center">
-    <h5>Tecnologias Utilizadas:</h5>
+    <h3>Tecnologias Utilizadas:</h3>
     <li>React</li>
     <li>Node.js</li>
     <li>MongoDB</li>
