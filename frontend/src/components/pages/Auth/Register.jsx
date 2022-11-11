@@ -1,19 +1,35 @@
+import { useState, useContext } from 'react';
+
 import { Input } from "../../form/Input";
 
 import { Link } from 'react-router-dom';
 
 import '../../form/Form.css';
 
+// CONTEXT
+import { Context } from '../../../context/UserContext';
+
 export function Register() {
 
-    function handleChange(e) {
+    const [user, setUser] = useState({})
+    // desestruturando a funcao register de context
+    const { register } = useContext(Context)
 
+    function handleChange(e) {
+        // insere no usestate com o name e o value do input
+        setUser({...user, [e.target.name]: e.target.value})
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        // enviar usuario para o banco pelo context
+        register(user)
     }
 
     return (
         <section className="form_container">
             <h1>Registrar</h1>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <Input 
                     text="Nome"
                     type="text"
