@@ -11,7 +11,7 @@ import { Context } from '../../context/UserContext';
 
 export function Navbar() {
     // variavel que diz se o usuario esta autenticado via token
-    const {authenticated} = useContext(Context)
+    const {authenticated, logout} = useContext(Context)
 
     return (
         <nav className='navbar'>
@@ -25,7 +25,7 @@ export function Navbar() {
                 </li>
                 {authenticated ? (
                     <>
-                        <p>Logado</p>
+                        <li onClick={logout}>Sair</li>
                     </>
                 ) : (
                     <>
