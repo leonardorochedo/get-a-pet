@@ -1,10 +1,18 @@
+import { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/img/logo.png';
 
 import './Navbar.css';
 
+// CONTEXT
+import { Context } from '../../context/UserContext';
+
 export function Navbar() {
+    // variavel que diz se o usuario esta autenticado via token
+    const {authenticated} = useContext(Context)
+
     return (
         <nav className='navbar'>
             <div className='navbar-logo'>
@@ -15,12 +23,21 @@ export function Navbar() {
                 <li>
                     <Link to="/">Adotar</Link>
                 </li>
-                <li>
-                    <Link to="/login">Entrar</Link>
-                </li>
-                <li>
-                    <Link to="/register">Cadastrar</Link>
-                </li>
+                {authenticated ? (
+                    <>
+                        <p>Logado</p>
+                    </>
+                ) : (
+                    <>
+                        <li>
+                            <Link to="/login">Entrar</Link>
+                        </li>
+                        <li>
+                            <Link to="/register">Cadastrar</Link>
+                        </li>
+                    </>
+                )}
+                
             </ul>
         </nav>
     );
