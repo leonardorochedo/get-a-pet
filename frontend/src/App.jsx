@@ -7,6 +7,7 @@ import {
 // Components
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
+import { Container } from "./components/layout/Container";
 
 // Pages
 import { Home } from "./components/pages/Home";
@@ -18,11 +19,13 @@ export function App() {
   return (
     <BrowserRouter>
     <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </Container>
       <Footer />
     </BrowserRouter>
   )
