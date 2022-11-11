@@ -95,4 +95,19 @@ module.exports = class PetController {
         })
 
     }
+
+    static async getAllUserPets(req, res) {
+
+        // get user by token
+        const token = getToken(req)
+        const user = await getUserByToken(token)
+
+        // get a pet with filter where in especific document in mongo
+        const pets = await Pet.find({'user._id': user._id}).sort('-createdAt')
+
+        // send to frontend
+        res.status(200).json({
+            pets
+        })
+    }
 }
