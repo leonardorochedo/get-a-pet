@@ -17,8 +17,12 @@ const imageStorage = multer.diskStorage({
 
     },
     filename: function (req, file, cb) {
-        cb(null, Date.now() + path.extname(file.originalname))
-    } // 213213123.jps
+        cb(
+            null,
+            Date.now() +
+            String(Math.floor(Math.random() * 100)) +
+            path.extname(file.originalname))
+    } // filename: 21321312312312.jpg
 })
 
 const imageUpload = multer({

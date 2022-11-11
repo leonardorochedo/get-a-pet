@@ -9,6 +9,8 @@ module.exports = class PetController {
         
         const {name, age, weight, color} = req.body
 
+        const images = req.files
+
         const available = true
 
         // images
@@ -38,6 +40,12 @@ module.exports = class PetController {
             })
         }
 
+        if(images.length === 0) {
+            res.status(422).json({
+                message: 'A imagem é obrigatória!'
+            })
+        }
+
         // get a user owner
         const token = getToken(req)
         const user = await getUserByToken(token)
@@ -58,6 +66,10 @@ module.exports = class PetController {
             }
         })
 
+        images.map((image) => {
+            pet.images.push(image.filename)
+        })
+
         try {
             const newPet = await pet.save() // salvando no banco
             res.status(201).json({
@@ -69,6 +81,18 @@ module.exports = class PetController {
                 message: err
             })
         }
+
+    }
+
+    static async getAll(req, res) {
+
+        // coletando os pets do banco e ordenando com o sort()
+        const pets = await Pet.find().sort('-createdAt')
+
+        // mandando os pets para o front
+        res.status(200).json({
+            pets
+        })
 
     }
 }
