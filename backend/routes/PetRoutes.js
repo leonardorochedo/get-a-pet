@@ -9,6 +9,7 @@ const { imageUpload } = require('../helpers/image-upload')
 router.post('/create', verifyToken, imageUpload.array('images'), PetController.create)
 router.delete('/:id', verifyToken, PetController.removePetById)
 router.patch('/:id', verifyToken, imageUpload.array('images'), PetController.updatePet)
+router.patch('/schedule/:id', verifyToken, PetController.schedule)
 
 router.get('/mypets', verifyToken, PetController.getAllUserPets)
 router.get('/myadoptions', verifyToken, PetController.getAllUserAdoptions)
