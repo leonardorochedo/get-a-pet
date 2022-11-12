@@ -6,6 +6,7 @@ import './Profile.css';
 import '../../form/Form.css';
 
 import { Input } from '../../form/Input';
+import { RoundedImage } from '../../layout/RoundedImage';
 
 import useFlashMessage from '../../../hooks/useFlashMessage';
 
@@ -70,7 +71,7 @@ export function Profile() {
             <div className="profile_container">
                 <h1>Profile</h1>
                 {(user.image || preview) && (
-                    <img src={
+                    <RoundedImage src={
                         preview
                         ? URL.createObjectURL(preview)
                         : `http://localhost:5000//images/users/${user.image}`}
