@@ -18,6 +18,7 @@ import { Profile } from "./components/pages/User/Profile";
 
 // Context
 import { UserProvider } from "./context/UserContext";
+import { MyPets } from "./components/pages/Pet/MyPets";
 
 export function App() {
 
@@ -32,6 +33,7 @@ export function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/user/profile" element={<Profile />} />
+          <Route path="/pets/mypets" element={<MyPets />} />
         </Routes>
       </Container>
       <Footer />
