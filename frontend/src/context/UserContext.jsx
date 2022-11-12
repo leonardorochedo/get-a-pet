@@ -6,10 +6,10 @@ const Context = createContext()
 
 function UserProvider({children}) {
     // import auth
-    const { register, authenticated, logout } = useAuth()
+    const { register, login, authenticated, logout } = useAuth()
 
     return (
-        <Context.Provider value={{register, authenticated, logout}}>
+        <Context.Provider value={{register, login, authenticated, logout}}>
             {children}
         </Context.Provider>
     )

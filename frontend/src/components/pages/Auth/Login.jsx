@@ -10,14 +10,24 @@ import { Context } from '../../../context/UserContext';
 
 export function Login() {
 
-    function handleChange() {
+    const [user, setUser] = useState({})
+    const {login} = useContext(Context) // importnado a funcao de login do context
 
+    function handleChange(e) {
+        // preenchendo o state
+        setUser({...user, [e.target.name]: e.target.value})
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        // enviar usuario para o banco pelo context
+        login(user)
     }
 
     return (
         <section className='form_container'>
             <h1>Login</h1>
-            <form >
+            <form onSubmit={handleSubmit} >
                 <Input
                     text="E-mail"
                     type="email"
