@@ -1,3 +1,5 @@
+import api from '../../../utils/api'; // import api
+
 import { useState, useEffect } from 'react';
 
 import './Profile.css';
@@ -8,6 +10,20 @@ import { Input } from '../../form/Input';
 export function Profile() {
 
     const [user, setUser] = useState({})
+    // pegando o token via lS
+    const [token] = useState(localStorage.getItem('token') || '')
+
+    useEffect(() => {
+        // dando um get na api que retorna as informacoes do user via token
+        api.get('/users/checkuser', {
+            headers: {
+                Authorization: `Bearer ${JSON.parse(token)}`
+            }
+        }).then((response) => {
+            setUser(response.data) // setando as info do back no user
+        })
+
+    }, [])
 
     function onFileChange() {
 
