@@ -3,6 +3,8 @@
     margin: 0 auto;
     background-color: #FFF;
     border-radius: 15px;
+
+    margin-top: 1em;
 }
 
 .form_container input[type='submit'] {
