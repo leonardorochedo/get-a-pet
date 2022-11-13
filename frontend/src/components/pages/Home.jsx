@@ -31,7 +31,7 @@ export function Home() {
                             <h3>{pet.name}</h3>
                             <p><span className="bold">Peso: </span>{pet.weight}</p>
                             {pet.available ? (
-                                <Link to={`pet/${pet._id}`}>Mais detalhes</Link>
+                                <Link to={`pets/${pet._id}`}>Mais detalhes</Link>
                             ) : (
                                 <p className='adopted_text'>Adotado</p>
                             )}
