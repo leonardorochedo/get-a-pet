@@ -263,13 +263,8 @@ module.exports = class PetController {
             updatedData.color = color
         }
 
-        if(images.length === 0) {
-            res.status(422).json({
-                message: 'A imagem é obrigatória!'
-            })
-        } else {
+        if(images.length > 0) {
             updatedData.images = []
-
             // adicionando o nome de cada imagem ao array
             images.map((image) => {
                 updatedData.images.push(image.filename)

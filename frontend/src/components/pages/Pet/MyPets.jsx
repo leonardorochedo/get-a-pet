@@ -71,7 +71,7 @@ export function MyPets() {
                                     {pet.adopter && (
                                         <button className='conclude_btn'>Concluir Adoção</button>
                                     )}
-                                    <Link to={`/pet/edit/${pet._id}`}>Editar</Link>
+                                    <Link to={`/pets/edit/${pet._id}`}>Editar</Link>
                                     <button onClick={() => {
                                         removePet(pet._id)
                                     }}>Excluir</button>

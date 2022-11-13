@@ -42,7 +42,7 @@ export function PetForm({ handleSubmit, petData, btnText }) {
                 )) :
                 pet.images && pet.images.map((image, index) => (
                     <img 
-                    src={`http://localhost:5000//images/pets${image}`}
+                    src={`http://localhost:5000//images/pets/${image}`}
                     alt={pet.name} key={`${pet.name}+${index}`}
                     />
                 ))
@@ -68,7 +68,7 @@ export function PetForm({ handleSubmit, petData, btnText }) {
                 type="text"
                 name="age"
                 placeholder="Digite a idade"
-                // value={pet.age || ''}
+                value={pet.age || ''}
                 handleOnChange={handleChange}
             />
             <Input 
@@ -76,14 +76,14 @@ export function PetForm({ handleSubmit, petData, btnText }) {
                 type="number"
                 name="weight"
                 placeholder="Digite o peso"
-                // value={pet.weight || ''}
+                value={pet.weight || ''}
                 handleOnChange={handleChange}
             />
             <Select 
                 text="Selecione a cor"
                 name="color"
                 options={colors}
-                // value={pet.color || ''}
+                value={pet.color || ''}
                 handleOnChange={handleColor}
             />
             <input type="submit" value={btnText} />
