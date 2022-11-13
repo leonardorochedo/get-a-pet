@@ -32,3 +32,18 @@
     color: var(--primary-text-color);
     font-weight: bold;
 }
+
+/* form de pets */
+.preview_pet_images {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.preview_pet_images img {
+    width: 150px;
+    height: 150px;
+    margin-left: 1em;
+    border: 2px solid var(--primary-bg-color);
+    box-shadow: 0px 0px 3px black;
+}
