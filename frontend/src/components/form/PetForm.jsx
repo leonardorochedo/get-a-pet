@@ -17,7 +17,7 @@ export function PetForm({ handleSubmit, petData, btnText }) {
     }
 
     function handleChange(e) {
-        setPet({...pet, [e.target.name]: [...e.target.value]})
+        setPet({...pet, [e.target.name]: e.target.value})
     }
 
     function handleColor(e) {
@@ -27,7 +27,7 @@ export function PetForm({ handleSubmit, petData, btnText }) {
     function submit(e) {
         e.preventDefault()
         console.log(pet)
-        //handleSubmit(pet)
+        handleSubmit(pet) // inseriando na register pet
     }
 
     return (
@@ -60,7 +60,7 @@ export function PetForm({ handleSubmit, petData, btnText }) {
                 type="text"
                 name="name"
                 placeholder="Digite o nome"
-                // value={pet.name || ''}
+                value={pet.name || ''}
                 handleOnChange={handleChange}
             />
             <Input 
