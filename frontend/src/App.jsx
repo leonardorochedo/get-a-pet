@@ -15,10 +15,11 @@ import { Home } from "./components/pages/Home";
 import { Login } from "./components/pages/Auth/Login";
 import { Register } from "./components/pages/Auth/Register";
 import { Profile } from "./components/pages/User/Profile";
+import { MyPets } from "./components/pages/Pet/MyPets";
+import { AddPet } from "./components/pages/Pet/AddPet";
 
 // Context
 import { UserProvider } from "./context/UserContext";
-import { MyPets } from "./components/pages/Pet/MyPets";
 
 export function App() {
 
@@ -34,6 +35,7 @@ export function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/user/profile" element={<Profile />} />
           <Route path="/pets/mypets" element={<MyPets />} />
+          <Route path="/pets/add" element={<AddPet />} />
         </Routes>
       </Container>
       <Footer />
