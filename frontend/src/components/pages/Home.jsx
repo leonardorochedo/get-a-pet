@@ -29,7 +29,7 @@ export function Home() {
                         <div className='pet_card'>
                             <div className="pet_card_image" style={{ backgroundImage: `url(http://localhost:5000//images/pets/${pet.images[0]})` }} ></div>
                             <h3>{pet.name}</h3>
-                            <p><span className="bold">Peso: </span>{pet.weight}</p>
+                            <p><span className="bold">Peso: </span>{pet.weight} kg</p>
                             {pet.available ? (
                                 <Link to={`pets/${pet._id}`}>Mais detalhes</Link>
                             ) : (

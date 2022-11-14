@@ -25,6 +25,7 @@ export function Navbar() {
                 </li>
                 {authenticated ? (
                     <>
+                        <li><Link to="/pets/myadoptions">Minhas Adoçoes</Link></li>
                         <li><Link to="/pets/mypets">Meus Pets</Link></li>
                         <li><Link to="/user/profile">Perfil</Link></li>
                         <li onClick={logout}>Sair</li>
