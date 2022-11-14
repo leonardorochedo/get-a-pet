@@ -11,29 +11,48 @@
     <p>Aprendi muitos conceitos com esse projeto mas principalmente sobre como desenvolver uma API RESTFUL completamente independente do Frontend, e a consumir ela no Frontend em React.js, também aprendi conceitos sobre localStorage, a lidar com token, manipulação de imagens no backend entre outros.</p>
 </div>
 
-<ul align="center">
+<div flex="wrap">
+<ul align="left">
     <h3>Tecnologias Utilizadas:</h3>
-    <li>React</li>
-    <li>Node.js</li>
-    <li>MongoDB</li>
+    React<br>
+    Node.js<br>
+    MongoDB<br>
 </ul>
 
-<ul align="center">
+<ul align="right">
     <h5>Dependencias do FrontEnd:</h5>
-    <li>axios</li>
-    <li>events</li>
-    <li>react-router-dom</li>
-    <li>react-icons</li>
+    axios<br>
+    events<br>
+    react-router-dom<br>
+    react-icons<br>
 </ul>
 
-<ul align="center">
+<ul align="left">
     <h5>Dependencias do BackEnd:</h5>
-    <li>bcrypt</li>
-    <li>cookie-parser</li>
-    <li>cors</li>
-    <li>express</li>
-    <li>jsonwebtoken</li>
-    <li>mongoose</li>
-    <li>multer</li>
-    <li>react-reveal</li>
+    bcrypt<br>
+    cookie-parser<br>
+    cors<br>
+    express<br>
+    jsonwebtoken<br>
+    mongoose<br>
+    multer<br>
+    react-reveal<br>
 </ul>
+</div>
+
+<div align="center">
+    <h3>Para rodar esse projeto em sua máquina:</h3>
+    <p>Em cada diretório do projeto</p>
+    <code>
+    npm install
+    </code>
+    <p>No diretório backend</p>
+    <code>
+    npm start
+    </code>
+    <p>No diretório frontend</p>
+    <code>
+    npm run dev
+    </code>
+    <p><i>E pronto acesse a URL que o console irá fornecer e se divirta!</i></p>
+</div>
